@@ -13,9 +13,9 @@ set -e
 # EDIT this section to Select Default Versions #
 ################################################
 
-OPENSSL="1.1.1p"	# https://www.openssl.org/source/ 
-LIBCURL="7.84.0"	# https://curl.haxx.se/download.html
-NGHTTP2="1.48.0"	# https://nghttp2.org/
+OPENSSL="1.1.1t"	# https://www.openssl.org/source/ 
+LIBCURL="8.0.1"	# https://curl.haxx.se/download.html
+NGHTTP2="1.52.0"	# https://nghttp2.org/
 
 ################################################
 
@@ -24,11 +24,11 @@ BUILD_MACHINE=`uname -m`
 BUILD_CMD=$*
 
 # Set minimum OS versions for target
-MACOS_X86_64_VERSION=""			# Empty = use host version
-MACOS_ARM64_VERSION=""			# Min supported is MacOS 11.0 Big Sur
+MACOS_X86_64_VERSION="12.0"			# Empty = use host version
+MACOS_ARM64_VERSION="12.0"			# Min supported is MacOS 11.0 Big Sur
 CATALYST_IOS="15.0"				# Min supported is iOS 15.0 for Mac Catalyst
-IOS_MIN_SDK_VERSION="8.0"
-TVOS_MIN_SDK_VERSION="9.0"
+IOS_MIN_SDK_VERSION="13.0"
+TVOS_MIN_SDK_VERSION="13.0"
 
 # Semantic Version Comparison
 version_lte() {
